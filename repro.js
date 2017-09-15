@@ -19,7 +19,7 @@ const rs = readAllFilesInTar('s_covers_0000_00.tar', (entry, doneCb) => {
 			.raw()
 			.toBuffer((err, data, info) => {
 				if(err){
-					if(buf2[0] !== buf2[1]){}//DELETE/COMMENT this line to trigger error
+					//if(buf2[0] !== buf2[1]){}//DELETE/COMMENT this line to trigger error
 					throw err;
 				}
 				++okCount;
@@ -28,4 +28,5 @@ const rs = readAllFilesInTar('s_covers_0000_00.tar', (entry, doneCb) => {
 	})
 }, () => {
 	console.log('finished ' + okCount + ' jpeg files from the tar file without error.')
+	console.log('comment out/delete line 22 of repro.js to trigger bug')
 })
