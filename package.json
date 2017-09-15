@@ -1,0 +1,8 @@
+{
+	"name": "sharp-buffer-loss-reproduction",
+	"scripts": {"start": "node repro"},
+	"dependencies": {
+		"sharp": "^0.18.3",
+		"tar": "^4.0.1"
+	}
+}
